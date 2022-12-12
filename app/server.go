@@ -17,6 +17,8 @@ type Server struct {
 func (server *Server) Initialize() {
 	fmt.Println("Welcome to toko")
 	server.Router = mux.NewRouter()
+	server.initializeRoute()
+
 }
 
 func (server *Server) Run(addr string) {
@@ -27,5 +29,5 @@ func (server *Server) Run(addr string) {
 func Run() {
 	var server = Server{}
 	server.Initialize()
-	server.Run("9000")
+	server.Run("localhost:9001")
 }
