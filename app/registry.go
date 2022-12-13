@@ -1,6 +1,6 @@
 package app
 
-import "github.com/taujago/gotoko/models"
+import "github.com/taujago/gotoko/app/models"
 
 type Model struct {
 	Model interface{}

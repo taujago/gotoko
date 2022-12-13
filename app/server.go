@@ -54,7 +54,7 @@ func (server *Server) InitializeDB(dbConfig DbConfig) {
 	}
 
 	for _, model := range RegisterModel() {
-		err = server.DB.Debug.AutoMigrate(model.Model)
+		err = server.DB.Debug().AutoMigrate(model.Model)
 		if err != nil {
 			log.Fatal(err)
 		}
