@@ -99,5 +99,6 @@ func Run() {
 
 	server.Initialize(appConfig)
 	server.InitializeDB(dbConfig)
+	// seeder.DBSeed(server.DB)
 	server.Run(":" + appConfig.AppPort)
 }
